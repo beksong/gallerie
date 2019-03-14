@@ -2,8 +2,8 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="tbprintall">
+            <div>
+                <table class="table table-responsive table-bordered" id="tbprintall">
                     <thead>
                         <tr>
                             <td>No.</td>

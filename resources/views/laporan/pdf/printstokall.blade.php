@@ -2,8 +2,8 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover" id="tbstokall">
+            <div>
+                <table class="table table-bordered table-responsive" id="tbstokall">
                     <thead>
                         <th>No.</th>
                         <th>Kode Barang</th>

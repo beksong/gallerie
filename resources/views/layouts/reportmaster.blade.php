@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Laporan Penjualan</title>
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/bootstrap/css/bootstrap.min.css') }}">
     <style type="text/css">
-      <?php include(public_path().'../vendor/adminlte/bootstrap/css/bootstrap.min.css');?>
+      
       /*bagian ini penting untuk menghilangkan kolom sing g bner di table pada saat cetak report*/
         thead:before, thead:after,
         tbody:before, tbody:after,

@@ -24,7 +24,7 @@ class BarangController extends Controller
       $barangs=Barang::with('category','merk')->get();
       return DataTables::of($barangs)
       ->addColumn('action',function($barang){
-        return '<a href="" class="btn btn-warning" data-toggle="modal" data-target="#editbarangmodal" data-barang_id="'.$barang->id.'" data-kd_barang="'.$barang->kd_barang.'" data-category_id="'.$barang->category->id.'" data-barang="'.$barang->barang.'" data-merk_id="'.$barang->merk->id.'" data-hrg_beli="'.$barang->hrg_beli.'" data-hrg_jual="'.$barang->hrg_jual.'" data-stok="'.$barang->stok.'" data-satuan="'.$barang->satuan.'" data-stok_min="'.$barang->stok_min.'" data-discount="$barang->discount"><i class="fa fa-btn fa-pencil"></i></a><a href="" class="btn btn-danger" data-toggle="modal" data-target="#delbarangmodal" data-barang_id="'.$barang->id.'" data-kd_barang="'.$barang->kd_barang.'" data-category_id="'.$barang->category->id.'" data-barang="'.$barang->barang.'" data-merk_id="'.$barang->merk->id.'" data-hrg_beli="'.$barang->hrg_beli.'" data-hrg_jual="'.$barang->hrg_jual.'" data-stok="'.$barang->stok.'" data-satuan="'.$barang->satuan.'" data-stok_min="'.$barang->stok_min.'" data-discount="'.$barang->discount.'"><i class="fa fa-btn fa-trash"></i></a>';
+        return view('barang.tb-buttonbarang',compact('barang'));
       })->make(true);
     }
 

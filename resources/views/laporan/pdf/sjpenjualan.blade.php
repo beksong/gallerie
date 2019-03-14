@@ -23,8 +23,8 @@
     <div class="row">
         <div class="col-sm-12">
             <p>Bersama ini kami kirimkan sejumlah barang sebagai berikut :</p>
-            <div class="table-responsive">
-                <table class="table table-bordered" id="tbprintall">
+            <div>
+                <table class="table table-responsive table-bordered" id="tbprintall">
                     <thead>
                         <tr>
                             <td>No.</td>

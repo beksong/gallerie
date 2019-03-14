@@ -15,35 +15,35 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/clear-cache', function() {
-    $exitCode = Artisan::call('config:cache');
-    // return what you want
-    return view('welcome');
-});
+// Route::get('/clear-cache', function() {
+//     $exitCode = Artisan::call('config:cache');
+//     // return what you want
+//     return view('welcome');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::group(['middleware'=>['auth','permission:manage_user']],function(){
 	/*role*/
-	Route::get('roles','Admincontroller@showrole');
-	Route::post('createrole','Admincontroller@createrole');
-	Route::post('updaterole/{role_id}','Admincontroller@updaterole');
-	Route::post('deleterole/{role_id}','Admincontroller@deleterole');
+	Route::get('roles','AdminController@showrole');
+	Route::post('createrole','AdminController@createrole');
+	Route::post('updaterole/{role_id}','AdminController@updaterole');
+	Route::post('deleterole/{role_id}','AdminController@deleterole');
 	/*permission*/
 	Route::get('permission','AdminController@show');
-	Route::post('/createpermission','Admincontroller@createpermission');
-	Route::post('/updatepermission/{pid}','Admincontroller@updatepermission');
-	Route::get('/deletepermission/{pid}','Admincontroller@deletepermission');
+	Route::post('/createpermission','AdminController@createpermission');
+	Route::post('/updatepermission/{pid}','AdminController@updatepermission');
+	Route::get('/deletepermission/{pid}','AdminController@deletepermission');
 	/*permission role*/
-	Route::get('permissionrole','Admincontroller@showpermissionrole');
-	Route::get('permissionrole/{role_id}','Admincontroller@showfrmpermissionrole');
-	Route::post('permissionrole/addperms/{role_id}','Admincontroller@attachpermissionrole');
+	Route::get('permissionrole','AdminController@showpermissionrole');
+	Route::get('permissionrole/{role_id}','AdminController@showfrmpermissionrole');
+	Route::post('permissionrole/addperms/{role_id}','AdminController@attachpermissionrole');
 	Route::get('detachallpermissionrole/{role_id}','AdminController@detachallpermission');
 	/*Role User*/
 	Route::get('roleuser','AdminController@showroleuser');
-	Route::post('attachroleuser/{user_id}','Admincontroller@attachroleuser');
-	Route::get('detachroleuser/{user_id}','Admincontroller@detachallroleuser');
+	Route::post('attachroleuser/{user_id}','AdminController@attachroleuser');
+	Route::get('detachroleuser/{user_id}','AdminController@detachallroleuser');
 	/*Route::post('attachpermission','AdminController@create');
 	Route::get('role','Admincontroller@getrole');
 	Route::get('permissionuser/{role_id}','AdminController@getPermissionUser');*/

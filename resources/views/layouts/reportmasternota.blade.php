@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Laporan Penjualan</title>
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/bootstrap/css/bootstrap.min.css') }}">
     <style type="text/css">
-      <?php include(public_path().'../vendor/adminlte/bootstrap/css/bootstrap.min.css');?>
       /*untuk mengatur table*/
 
       /*thead:before, thead:after,

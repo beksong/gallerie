@@ -29,8 +29,8 @@ class LaporanView extends Controller
 
     public function previewall()
     {
-        $detils=Detilpenjualan::with('penjualan')->uuget();
-				//return $detils;
+        $detils=Detilpenjualan::with('penjualan')->get();
+		// return $detils;
         $rand=str_random(5);
         return view('laporan.pdf.printall',compact('detils'));
     }
